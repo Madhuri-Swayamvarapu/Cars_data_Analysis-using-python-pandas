@@ -40,9 +40,8 @@ Length
 Each row represents information about a specific car model.
 
 **🛠️ Technologies Used**
-Python 🐍
 
-Used as the programming language for performing data analysis.
+Python --> Used as the programming language for performing data analysis.
 
 Pandas 📊
 
@@ -57,52 +56,45 @@ Jupyter Notebook
 Used to execute Python code interactively and visualize outputs.
 
 🔍 Pandas Functions Used
-🔹 import pandas as pd
 
-Used to import the Pandas library.
+🔹 import pandas as pd --> Used to import the Pandas library.
 
-import pandas as pd
-🔹 pd.read_csv()
+   syntax:import pandas as pd
+   
+🔹 pd.read_csv()-->Used to load the CSV dataset into the notebook.
 
-Used to load the CSV dataset into the notebook.
+   syntax: df= pd.read_csv("Car Data.csv")
+   
+🔹 head()-->Displays the first 5 rows of the dataset.
 
-df = pd.read_csv("Car Data.csv")
-🔹 head()
+   syntax: df.head()
+   
+🔹 shape-->Shows the total number of rows and columns.
 
-Displays the first 5 rows of the dataset.
+   syntax:df.shape
+   
+🔹 isnull().sum()-->Checks for missing values in each column.
 
-df.head()
-🔹 shape
+   syntax:df.isnull().sum()
+   
+🔹 fillna()-->Used to replace missing values.
 
-Shows the total number of rows and columns.
+   syntax:df['Cylinders'] = df['Cylinders'].fillna(df['Cylinders'].mean())
+   
+🔹 value_counts()-->Shows unique values along with their occurrence count.
 
-df.shape
-🔹 isnull().sum()
+  syntax:df['Make'].value_counts()
+  
+🔹 isin()-->Filters records containing specific values.
 
-Checks for missing values in each column.
+  syntax:df[df['Origin'].isin(['Asia','Europe'])]
+  
+🔹 apply()-->Applies a function on dataframe columns.
 
-df.isnull().sum()
-🔹 fillna()
+  syntax:df['MPG_City'] = df['MPG_City'].apply(lambda x:x+3)
 
-Used to replace missing values.
-
-df['Cylinders'] = df['Cylinders'].fillna(df['Cylinders'].mean())
-🔹 value_counts()
-
-Shows unique values along with their occurrence count.
-
-df['Make'].value_counts()
-🔹 isin()
-
-Filters records containing specific values.
-
-df[df['Origin'].isin(['Asia','Europe'])]
-🔹 apply()
-
-Applies a function on dataframe columns.
-
-df['MPG_City'] = df['MPG_City'].apply(lambda x:x+3)
-📊 Tasks Performed in the Project
+  
+**📊 Tasks Performed in the Project**
 
 **✅ Q1) Data Cleaning**
 Find all Null Values in the dataset and fill them with the mean value of that column.
