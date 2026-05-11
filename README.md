@@ -147,11 +147,12 @@ Increased city mileage values by 3 for all records
 ✔️ Unwanted records can be removed easily using conditional filtering.
 ✔️ Functions can be applied efficiently on dataframe columns using apply().
 
-📁 Project Structure
-├── Car Data Analysis.ipynb
-├── Car Data.csv
-├── README.md
-🎯 Conclusion
+   📁 Project Structure
+   ├── Car Data Analysis.ipynb
+   ├── Car Data.csv
+   ├── README.md
+   
+**🎯 Conclusion**
 
 This project demonstrates how Pandas can be used for real-world automobile data analysis and preprocessing. Various operations such as handling missing values, filtering records, removing unnecessary data, counting occurrences, and modifying column values were successfully performed.
 
